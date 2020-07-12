@@ -11,5 +11,7 @@ new common layer class structure
 - refer to common class to organize and write code in Model-ViewModel and View-Window layers.
 - file path: Code/Utility/Common/
 - read the README.md file for guidance.
+
 7.12 wrh
-创建了飞机、子弹类文件。待上传发射子弹、击中目标、目标消亡的代码。
+- 创建了飞机、子弹类文件。
+- 待上传发射子弹、击中目标、目标消亡的代码。
