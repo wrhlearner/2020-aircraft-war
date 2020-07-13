@@ -14,35 +14,35 @@ public:
 	//virtual void Disappear() = 0;
 
 	void SetName(int Name);
-	int GetName();
+	int GetName() const;
 	void SetPictureMap(char* PictureMap, int Choice);
-	std::vector<char*> GetPictureMap();
+	std::vector<char*> GetPictureMap() const;
 	void SetSize(double Width, double Height);
-	double GetWidth();
-	double GetHeight();
+	double GetWidth() const;
+	double GetHeight() const;
 	void SetPosition(double x, double y);
-	double GetPositionX();
-	double GetPositionY();
+	double GetPositionX() const;
+	double GetPositionY() const;
 	void SetSpeed(double Speed);
-	double GetSpeed();
+	double GetSpeed() const;
 	void SetDirection(MOVEDIRECTION Direction);
-	MOVEDIRECTION GetDirection();
+	MOVEDIRECTION GetDirection() const;
 	void SetExist(bool Exist);
-	bool GetExist();
+	bool GetExist() const;
 	
 protected:
 	std::vector<char*> m_PictureMap;
-	//ÎïÌåÍ¼Ïñ£¬ÓÃÓÚÏÔÊ¾ÎïÌå
+	//ç‰©ä½“å›¾åƒï¼Œç”¨äºæ˜¾ç¤ºç‰©ä½“
 	int m_Name;
-	//ÎïÌåÃû³Æ£¬ÓÃÓÚ±êÊ¶ÎïÌåÀàĞÍ£ºÍæ¼Ò£¬Npc£¬×Óµ¯µÈ
+	//ç‰©ä½“åç§°ï¼Œç”¨äºæ ‡è¯†ç‰©ä½“ç±»å‹ï¼šç©å®¶ï¼ŒNpcï¼Œå­å¼¹ç­‰
 	double m_Width, m_Height;
-	//ÎïÌå´óĞ¡£¬ÓÃÓÚÅö×²¼ì²â£¬ÎïÌåµÄÏÔÊ¾¡¢ÏûÍöµÈ
+	//ç‰©ä½“å¤§å°ï¼Œç”¨äºç¢°æ’æ£€æµ‹ï¼Œç‰©ä½“çš„æ˜¾ç¤ºã€æ¶ˆäº¡ç­‰
 	double m_PosX, m_PosY;
-	//ÎïÌåÎ»ÖÃ(x,y)×ø±ê
+	//ç‰©ä½“ä½ç½®(x,y)åæ ‡
 	double m_Speed;
-	//ÎïÌåÒÆ¶¯ËÙ¶È
+	//ç‰©ä½“ç§»åŠ¨é€Ÿåº¦
 	MOVEDIRECTION m_Direction;
-	//ÎïÌåÒÆ¶¯·½Ïò
+	//ç‰©ä½“ç§»åŠ¨æ–¹å‘
 	bool m_Exist;
-	//ÎïÌåÊÇ·ñ´æÔÚ¡£ÀıÈç£¬·É»úÉúÃüÖµÊÇ·ñ´óÓÚ0£¬ ×Óµ¯ÊÇ·ñ»÷ÖĞÄ¿±ê
+	//ç‰©ä½“æ˜¯å¦å­˜åœ¨ã€‚ä¾‹å¦‚ï¼Œé£æœºç”Ÿå‘½å€¼æ˜¯å¦å¤§äº0ï¼Œ å­å¼¹æ˜¯å¦å‡»ä¸­ç›®æ ‡
 };
