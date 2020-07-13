@@ -22,3 +22,6 @@ void BossNpcBullet::SetBossNpcBulletPosition(const BossNpc& bn)
 	m_PosX = bn.GetPositionX() + BOSSNPCBULLETWIDTHOFFSET;
 	m_PosY = bn.GetPositionY() + BOSSNPCBULLETHEIGHTOFFSET;
 }
+void BossNpcBullet::SetBossNpcNumber(const BossNpc& bn) { m_BossNpcNumber = bn.m_Number; }
+void BossNpcBullet::SetBossNpcNumber(int BossNpcNumber) { m_BossNpcNumber = BossNpcNumber; }
+int BossNpcBullet::GetBossNpcNumber() const { return m_BossNpcNumber; }
