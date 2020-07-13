@@ -11,15 +11,15 @@ public:
 	//virtual void Collision() = 0;
 	//virtual void Disappear() = 0;
 
-	int GetObjectType();
+	int GetObjectType() const;
 	void SetObjectType(int ObjectType);
-	bool GetRelease();
+	bool GetRelease() const;
 	void SetRelease(bool Release);
-	bool GetDisplay();
+	bool GetDisplay() const;
 	void SetDisplay(bool Display);
 protected:
 	int m_ObjectType;
-	//·¢Éä×Óµ¯µÄ·ÉĞĞÆ÷ÀàĞÍ
+	//å‘å°„å­å¼¹çš„é£è¡Œå™¨ç±»å‹
 	bool m_Release, m_Display;
-	//ÊÇ·ñÒÑ¾­·¢Éä×Óµ¯£¬×Óµ¯ÊÇ·ñÏÔÊ¾
+	//æ˜¯å¦å·²ç»å‘å°„å­å¼¹ï¼Œå­å¼¹æ˜¯å¦æ˜¾ç¤º
 };
