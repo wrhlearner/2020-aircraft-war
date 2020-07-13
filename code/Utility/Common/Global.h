@@ -29,29 +29,39 @@
 #define SCENEHEIGHT 2000;
 
 //game parameter constant values
+//speed constant
 #define NORMALNPCSPEED 1
 #define BOSSNPCSPEED 2
 #define PLAYERSPEED 3
 #define BULLETSPEED 4
 #define NONESPEED -1
-
+//aircraft blood constant
 #define NORMALNPCBLOOD 1
 #define BOSSNPCBLOOD 2
 #define PLAYERBLOOD 3
 #define NONEBLOOD -1
-
+//aircraft blood decrease constant
+#define PLAYERBLOODDROP 1
+#define NORMALNPCBLOODDROP 1
+#define BOSSNPCBLOODDROP 1
+//bullet number initialization
+#define PLAYERBULLETNUMBER 20
+#define NORMALNPCBULLETNUMBER 10
+#define BOSSNPCBULLETNUMBER 20
+//aircraft firepower constant
 #define NORMALNPCFIREPOWER 1
 #define BOSSNPCFIREPOWER 2
 #define PLAYERFIREPOWER 3
 #define NONEFIREPOWER -1
 
-//coordinate the spatial relationship between player aircraft and its bullets
+//coordinate the spatial relationship between aircrafts and their bullets
 #define PLAYERBULLETWIDTHOFFSET 10.0
 #define PLAYERBULLETHEIGHTOFFSET 10.0
 #define NORMALNPCBULLETWIDTHOFFSET 10.0
 #define NORMALNPCBULLETHEIGHTOFFSET 10.0
 #define BOSSNPCBULLETWIDTHOFFSET 10.0
 #define BOSSNPCBULLETHEIGHTOFFSET 10.0
+
 
 //Data definition
 typedef enum { Pos, Neg, Neither } MOVEDIRECTION;
