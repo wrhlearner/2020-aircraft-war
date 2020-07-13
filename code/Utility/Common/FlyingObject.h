@@ -2,6 +2,8 @@
 #include "Global.h"
 #include <vector>
 
+bool CheckCollision(double Width1, double Height1, double PosX1, double PosY1, double Width2, double Height2, double PosX2, double PosY2);
+
 class FlyingObject
 {
 public:
@@ -11,7 +13,7 @@ public:
 	virtual ~FlyingObject() {}
 	
 	//virtual void Collision() = 0;
-	//virtual void Disappear() = 0;
+	virtual void Disappear();
 
 	void SetName(int Name);
 	int GetName() const;
