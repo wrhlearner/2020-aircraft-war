@@ -1,5 +1,11 @@
 #pragma once
 #include "Aircraft.h"
+#include "NormalNpc.h"
+#include "BossNpc.h"
+#include "NormalNpcBullet.h"
+#include "BossNpcBullet.h"
+#include "GenerateNpc.h"
+#include "GenerateBullet.h"
 
 class Player : public Aircraft
 {
@@ -8,8 +14,7 @@ public:
 	Player(char* PictureMap, int Name, double Width, double Height, double StartPosX, double StartPosY, double Speed, MOVEDIRECTION Direction, bool Exist, int Blood, int FirePower);
 	Player(const Player& p);
 	~Player() {}
-	//virtual void Collision();
-	//virtual void Disappear();
-	//virtual void EmitBullet();
-	
+	int Collision(GenerateNpc::BossNpcPlanes bnp, GenerateNpc::NormalNpcPlanes nnp, GenerateBullet::BossNpcBullets bnb, GenerateBullet::NormalNpcBullets nnb);
+	void Disappear();
+	GenerateBullet::PlayerBullets LoadBullet(GenerateBullet::PlayerBullets pb);
 };
