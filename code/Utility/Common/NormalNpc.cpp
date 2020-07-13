@@ -29,3 +29,59 @@ NormalNpc::NormalNpc(const NormalNpc& nn)
 	m_FirePower = nn.m_FirePower;
 	m_Number = nn.m_Number;
 }
+int NormalNpc::Collision(Player& TempPlayer, GenerateBullet::PlayerBullets pb)
+{
+	//碰撞处理过程：
+	//    检查Npc及子弹是否有效存在
+	//    检查空间上是否有重叠，判断碰撞是否发生
+	//    改变玩家飞机、Npc及子弹的属性
+	if (TempPlayer.GetExist()) 
+	{
+		if (CheckCollision(TempPlayer.GetWidth(), TempPlayer.GetHeight(), TempPlayer.GetPositionX(), TempPlayer.GetPositionY(), m_Width, m_Height, m_PosX, m_PosY))
+		{
+			Disappear();
+			TempPlayer.Disappear();
+			return 0;
+		}
+	}
+	if (!pb.empty())
+	{
+		std::list<PlayerBullet*>::iterator pbIterator = pb.begin();
+		while (pbIterator != pb.end())
+		{
+			if ((*pbIterator)->GetExist())
+			{
+				if (CheckCollision((*pbIterator)->GetWidth(), (*pbIterator)->GetHeight(), (*pbIterator)->GetPositionX(), (*pbIterator)->GetPositionY(), m_Width, m_Height, m_PosX, m_PosY))
+				{
+					if (m_Blood > PLAYERFIREPOWER)
+						m_Blood = m_Blood - PLAYERFIREPOWER;
+					else
+					{
+						Disappear();
+						(*pbIterator)->Disappear();
+						return 0;
+					}
+				}
+			}
+		}
+	}
+}
+GenerateBullet::NormalNpcBullets LoadBullet(GenerateBullet::NormalNpcBullets nnb) 
+{
+	if (nnb.size() == 0)
+	{
+		GenerateBullet::NormalNpcBullets NNBTemp;
+		for (int i = 0; i < NORMALNPCBULLETNUMBER; i++)
+			NNBTemp.push_back(new NormalNpcBullet());
+		std::list<NormalNpcBullet*>::iterator pnnb = NNBTemp.begin();
+		while (pnnb != NNBTemp.end())
+		{
+			(*pnnb)->SetNormalNpcNumber(m_Number);
+			(*pnnb)->SetExist(true);
+			pnnb++;
+		}
+		return NNBTemp;
+	}
+	else
+		return nnb;
+}
