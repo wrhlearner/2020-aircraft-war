@@ -1,3 +1,5 @@
+#include "RandAlg.h"
+
 int GetRandNum(int UpperBound, int LowerBound, int Seed)
 {
 	srand(Seed);
