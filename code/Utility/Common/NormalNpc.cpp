@@ -13,7 +13,7 @@ NormalNpc::NormalNpc()
 	m_Direction = Neg;
 	m_Exist = true;
 }
-NormalNpc::NormalNpc(char* PictureMap, int Name, double Width, double Height, double PosX, double PosY, double Speed, MOVEDIRECTION Direction, bool Exist, int Blood, int FirePower) :Npc(PictureMap, Name, Width, Height, PosX, PosY, Speed, Direction, Exist, Blood, FirePower) {}
+NormalNpc::NormalNpc(char* PictureMap, int Name, double Width, double Height, double PosX, double PosY, double Speed, MOVEDIRECTION Direction, bool Exist, int Blood, int FirePower, int Number) :Npc(PictureMap, Name, Width, Height, PosX, PosY, Speed, Direction, Exist, Blood, FirePower, Number) {}
 NormalNpc::NormalNpc(const NormalNpc& nn)
 {
 	m_Name = nn.m_Name;
@@ -27,4 +27,5 @@ NormalNpc::NormalNpc(const NormalNpc& nn)
 	m_PictureMap = nn.m_PictureMap;
 	m_Blood = nn.m_Blood;
 	m_FirePower = nn.m_FirePower;
+	m_Number = nn.m_Number;
 }
