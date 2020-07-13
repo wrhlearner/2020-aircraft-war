@@ -1,5 +1,10 @@
 #include "PlayerBullet.h"
 
+void PlayerBullet::SetBulletPosition(const Player& p)
+{
+	m_PosX = p.GetPositionX() + PLAYERBULLETWIDTHOFFSET;
+	m_PosY = p.GetPositionY() - PLAYERBULLETHEIGHTOFFSET;
+}
 PlayerBullet::PlayerBullet()
 {
 	m_Name = PLAYERBULLET;
