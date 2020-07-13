@@ -9,7 +9,7 @@ public:
 	Npc(const Npc& n);
 	~Npc() {}
 	void SetNumber(int Number);
-	int GetNumber();
+	int GetNumber() const;
 protected:
 	int m_Number;
 	//Npc编号，用于唯一确定Npc
