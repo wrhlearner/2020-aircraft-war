@@ -10,4 +10,10 @@ public:
 	NormalNpcBullet(const NormalNpcBullet& nb);
 	~NormalNpcBullet();
 	void SetNormalNpcBulletPosition(const NormalNpc& nn);
+	void SetNormalNpcNumber(const NormalNpc& nn);
+	void SetNormalNpcNumber(int NormalNpcNumber);
+	int GetNormalNpcNumber() const;
+protected:
+	int m_NormalNpcNumber;
+	//将子弹与Npc绑定，便于在不同时间获得子弹的位置
 };
