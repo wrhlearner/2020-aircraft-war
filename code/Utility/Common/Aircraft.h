@@ -9,9 +9,14 @@ public:
 	Aircraft(const Aircraft& a);
 	virtual ~Aircraft() {}
 	/*virtual void EmitBullet() = 0;*/
+	void Disappear();
+	void SetBlood(int Blood);
+	int GetBlood() const;
+	void SetFirePower(int FirePower);
+	int GetFirePower() const;
 protected:
 	int m_Blood;
-	//·ÉĞĞÆ÷ÉúÃüÖµ
+	//é£è¡Œå™¨ç”Ÿå‘½å€¼
 	int m_FirePower;
-	//·ÉĞĞÆ÷×Óµ¯É±ÉËÁ¦
+	//é£è¡Œå™¨å­å¼¹æ€ä¼¤åŠ›
 };
