@@ -1,4 +1,4 @@
-﻿#include "FlyingObject.h"
+#include "FlyingObject.h"
 
 FlyingObject::FlyingObject()
 {
@@ -33,7 +33,7 @@ FlyingObject::FlyingObject(const FlyingObject& fo)
 }
 
 void FlyingObject::SetName(int Name) { m_Name = Name; }
-int FlyingObject::GetName() { return m_Name; }
+int FlyingObject::GetName() const{ return m_Name; }
 void FlyingObject::SetPictureMap(char* PictureMap, int Choice)
 {
 	switch (Choice) {
@@ -48,24 +48,24 @@ void FlyingObject::SetPictureMap(char* PictureMap, int Choice)
 			break;
 	}
 }
-std::vector<char*> FlyingObject::GetPictureMap() { return m_PictureMap; }
+std::vector<char*> FlyingObject::GetPictureMap() const { return m_PictureMap; }
 void FlyingObject::SetSize(double Width, double Height) 
 { 
 	m_Width = Width; 
 	m_Height = Height; 
 }
-double FlyingObject::GetWidth() { return m_Width; }
-double FlyingObject::GetHeight() { return m_Height; }
+double FlyingObject::GetWidth() const { return m_Width; }
+double FlyingObject::GetHeight() const { return m_Height; }
 void FlyingObject::SetPosition(double x, double y)
 {
 	m_PosX = x;
 	m_PosY = y;
 }
-double FlyingObject::GetPositionX() { return m_PosX; }
-double FlyingObject::GetPositionY() { return m_PosY; }
+double FlyingObject::GetPositionX() const{ return m_PosX; }
+double FlyingObject::GetPositionY() const{ return m_PosY; }
 void FlyingObject::SetSpeed(double Speed) { m_Speed = Speed; }
-double FlyingObject::GetSpeed() { return m_Speed; }
+double FlyingObject::GetSpeed() const{ return m_Speed; }
 void FlyingObject::SetDirection(MOVEDIRECTION Direction) { m_Direction = Direction; }
-MOVEDIRECTION FlyingObject::GetDirection() { return m_Direction; }
+MOVEDIRECTION FlyingObject::GetDirection() const{ return m_Direction; }
 void FlyingObject::SetExist(bool Exist) { m_Exist = Exist; }
-bool FlyingObject::GetExist() { return m_Exist; }
+bool FlyingObject::GetExist() const{ return m_Exist; }
