@@ -16,7 +16,7 @@ public:
 	typedef std::list<NormalNpcBullet*> NormalNpcBullets;
 	typedef std::list<BossNpcBullet*> BossNpcBullets;
 	static Bombs bcreator(int Number);
-	static PlayerBullets pcreator(int Number, const Player& TempPlayer);
-	static NormalNpcBullets nncreator(int Number, GenerateNpc::NormalNpcPlanes NNTemp, const NormalNpc& TempNormalNpc);
-	static BossNpcBullets bncreator(int Number, GenerateNpc::BossNpcPlanes BNTemp, const BossNpc& TempBossNpc);
+	static PlayerBullets pcreator(int Number=PLAYERBULLETNUMBER);
+	static NormalNpcBullets nncreator(GenerateNpc::NormalNpcPlanes NNTemp, const NormalNpc& TempNormalNpc, int Number=NORMALNPCBULLETNUMBER);
+	static BossNpcBullets bncreator(GenerateNpc::BossNpcPlanes BNTemp, const BossNpc& TempBossNpc, int Number=BOSSNPCBULLETNUMBER);
 };
