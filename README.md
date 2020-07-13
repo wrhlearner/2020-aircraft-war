@@ -22,3 +22,4 @@ new common layer class structure
 
 7.13 wrh
 - 完成common层第一轮实现。
+- 游戏界面设想、坐标系等，详见code/Utility/Common/ 游戏界面.jpg及README.md
