@@ -22,3 +22,6 @@ void NormalNpcBullet::SetNormalNpcBulletPosition(const NormalNpc& nn)
 	m_PosX = nn.GetPositionX() + NORMALNPCBULLETWIDTHOFFSET;
 	m_PosY = nn.GetPositionY() + NORMALNPCBULLETHEIGHTOFFSET;
 }
+void NormalNpcBullet::SetNormalNpcNumber(const NormalNpc& nn) { m_NormalNpcNumber = nn.m_Number; }
+void NormalNpcBullet::SetNormalNpcNumber(int NormalNpcNumber) { m_NormalNpcNumber = NormalNpcNumber; }
+int NormalNpcBullet::GetNormalNpcNumber() const { return m_NormalNpcNumber; }
