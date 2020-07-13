@@ -1,5 +1,5 @@
 #include "Aircraft.h"
-#include "pch.h"
+
 Aircraft::Aircraft(){}
 Aircraft::Aircraft(char* PictureMap, int Name, double Width, double Height, double PosX, double PosY, double Speed, MOVEDIRECTION Direction, bool Exist, int Blood, int FirePower) :FlyingObject(PictureMap, Name, Width, Height, PosX, PosY, Speed, Direction)
 {
@@ -20,3 +20,12 @@ Aircraft::Aircraft(const Aircraft& a)
 	m_Blood = a.m_Blood;
 	m_FirePower = a.m_FirePower;
 }
+void Aircraft::Disappear()
+{
+	m_Blood = 0;
+	m_Exist = false;
+}
+void Aircraft::SetBlood(int Blood) { m_Blood = Blood; }
+int Aircraft::GetBlood() const { return m_Blood; }
+void Aircraft::SetFirePower(int FirePower) { m_FirePower = FirePower; }
+int Aircraft::GetFirePower() const { return m_FirePower; }
