@@ -1,5 +1,30 @@
 #include "FlyingObject.h"
 
+bool CheckCollision(double Width1, double Height1, double PosX1, double PosY1, double Width2, double Height2, double PosX2, double PosY2)
+{
+	//double Width1, double Height1, double PosX1, double PosY1 描述玩家飞机或玩家子弹参数；
+	//double Width2, double Height2, double PosX2, double PosY2 描述Npc飞机或Npc子弹参数；
+	//上下左右是从玩家角度判断的
+	//加减参数值是从界面坐标系判断的
+	double LeftBoundary1, RightBoundary1, UpBoundary1, DownBoundary1;
+	double LeftBoundary2, RightBoundary2, UpBoundary2, DownBoundary2;
+	
+	LeftBoundary1 = PosX1;
+	RightBoundary1 = PosX1 + Width1;
+	UpBoundary1 = PosY1;
+	DownBoundary1 = PosY1 + Height1;
+
+	LeftBoundary2 = PosX2;
+	RightBoundary2 = PosX2 + Width2;
+	UpBoundary2 = PosY2;
+	DownBoundary2 = PosY2 - Height2;
+
+	if(((LeftBoundary1 > LeftBoundary2) && (LeftBoundary1 < RightBoundary2))|| (RightBoundary1 > LeftBoundary2) && (RightBoundary1 < RightBoundary2))
+		if (((UpBoundary1 > DownBoundary2) && (UpBoundary1 < UpBoundary2))|| (DownBoundary1 > DownBoundary2) && (DownBoundary1 < UpBoundary2))
+			return true;
+	return false;
+}
+
 FlyingObject::FlyingObject()
 {
 	m_PosX = -1.0;
@@ -30,6 +55,11 @@ FlyingObject::FlyingObject(const FlyingObject& fo)
 	m_Direction = fo.m_Direction;
 	m_Exist = fo.m_Exist;
 	m_PictureMap = fo.m_PictureMap;
+}
+
+void FlyingObject::Disappear() 
+{ 
+	m_Exist = false; 
 }
 
 void FlyingObject::SetName(int Name) { m_Name = Name; }
