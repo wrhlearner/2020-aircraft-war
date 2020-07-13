@@ -10,4 +10,10 @@ public:
 	BossNpcBullet(const BossNpcBullet& bn);
 	~BossNpcBullet();
 	void SetBossNpcBulletPosition(const BossNpc& bn);
+	void SetBossNpcNumber(const BossNpc& bn);
+	void SetBossNpcNumber(int BossNpcNumber);
+	int GetBossNpcNumber() const;
+protected:
+	int m_BossNpcNumber;
+	//将子弹与Npc绑定，便于在不同时间获得子弹的位置
 };
