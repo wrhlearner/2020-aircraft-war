@@ -21,4 +21,4 @@ Npc::Npc(const Npc& n)
 	m_Number = n.m_Number;
 }
 void Npc::SetNumber(int Number) { m_Number = Number; }
-int Npc::GetNumber() { return m_Number; }
+int Npc::GetNumber() const{ return m_Number; }
