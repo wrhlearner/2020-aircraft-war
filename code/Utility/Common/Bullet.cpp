@@ -29,9 +29,9 @@ Bullet::Bullet(const Bullet& b)
 	m_Display = b.m_Display;
 }
 
-int Bullet::GetObjectType() { return m_ObjectType; }
+int Bullet::GetObjectType() const{ return m_ObjectType; }
 void Bullet::SetObjectType(int ObjectType) { m_ObjectType = ObjectType; }
-bool Bullet::GetRelease() { return m_Release; }
+bool Bullet::GetRelease() const{ return m_Release; }
 void Bullet::SetRelease(bool Release) { m_Release = Release; }
-bool Bullet::GetDisplay() { return m_Display; }
+bool Bullet::GetDisplay() const{ return m_Display; }
 void Bullet::SetDisplay(bool Display) { m_Display = Display; }
