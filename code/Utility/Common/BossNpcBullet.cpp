@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "BossNpcBullet.h"
 
 BossNpcBullet::BossNpcBullet() {}
@@ -17,11 +18,11 @@ BossNpcBullet::BossNpcBullet(const BossNpcBullet& bn)
 	m_Release = bn.m_Release;
 	m_Display = bn.m_Display;
 }
-void BossNpcBullet::SetBossNpcBulletPosition(const BossNpc& bn)
+void BossNpcBullet::SetBossNpcBulletPosition(BossNpc& bn)
 {
 	m_PosX = bn.GetPositionX() + BOSSNPCBULLETWIDTHOFFSET;
 	m_PosY = bn.GetPositionY() + BOSSNPCBULLETHEIGHTOFFSET;
 }
-void BossNpcBullet::SetBossNpcNumber(const BossNpc& bn) { m_BossNpcNumber = bn.m_Number; }
+void BossNpcBullet::SetBossNpcNumber(BossNpc& bn) { m_BossNpcNumber = bn.GetNumber(); }
 void BossNpcBullet::SetBossNpcNumber(int BossNpcNumber) { m_BossNpcNumber = BossNpcNumber; }
 int BossNpcBullet::GetBossNpcNumber() const { return m_BossNpcNumber; }
