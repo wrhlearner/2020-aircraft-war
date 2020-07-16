@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "GenerateNpc.h"
 
 GenerateNpc::BossNpcPlanes GenerateNpc::BossNpcCreator(int Number)
