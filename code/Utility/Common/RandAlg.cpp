@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "RandAlg.h"
 
 int GetRandNum(int UpperBound, int LowerBound, int Seed)
