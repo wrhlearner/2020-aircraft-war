@@ -1,4 +1,6 @@
-#pragma once
+#ifndef NPC_H
+#define NPC_H
+
 #include "Aircraft.h"
 
 class Npc : public Aircraft
@@ -14,3 +16,5 @@ protected:
 	int m_Number;
 	//Npc编号，用于唯一确定Npc
 };
+
+#endif // !NPC_H
