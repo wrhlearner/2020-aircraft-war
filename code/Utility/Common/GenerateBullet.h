@@ -1,4 +1,7 @@
-#pragma once
+#ifndef GENERATEBULLET_H
+#define GENERATEBULLET_H
+
+#include "Global.h"
 #include "Bomb.h"
 #include "Player.h"
 #include "NormalNpc.h"
@@ -16,7 +19,9 @@ public:
 	typedef std::list<NormalNpcBullet*> NormalNpcBullets;
 	typedef std::list<BossNpcBullet*> BossNpcBullets;
 	static Bombs bcreator(int Number);
-	static PlayerBullets pcreator(int Number=PLAYERBULLETNUMBER);
-	static NormalNpcBullets nncreator(GenerateNpc::NormalNpcPlanes NNTemp, const NormalNpc& TempNormalNpc, int Number=NORMALNPCBULLETNUMBER);
-	static BossNpcBullets bncreator(GenerateNpc::BossNpcPlanes BNTemp, const BossNpc& TempBossNpc, int Number=BOSSNPCBULLETNUMBER);
+	static PlayerBullets pcreator(int Number = PLAYERBULLETNUMBER);
+	static NormalNpcBullets nncreator(GenerateNpc::NormalNpcPlanes NNTemp, const NormalNpc& TempNormalNpc, int Number = NORMALNPCBULLETNUMBER);
+	static BossNpcBullets bncreator(GenerateNpc::BossNpcPlanes BNTemp, const BossNpc& TempBossNpc, int Number = BOSSNPCBULLETNUMBER);
 };
+
+#endif // !GENERATEBULLET_H
