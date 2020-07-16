@@ -5,6 +5,6 @@
 - 第三轮实现：检查完善MVVM设计模式，优化代码；在游戏中增加包功能。
 
 # 人员分工
-王荣浩：common层、app层
-唐煜程：model层、viewmodel层
-袁天智：view层、window层
+- 王荣浩：common层、app层
+- 唐煜程：model层、viewmodel层
+- 袁天智：view层、window层
