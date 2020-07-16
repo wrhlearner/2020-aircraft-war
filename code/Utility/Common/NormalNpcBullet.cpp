@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "NormalNpcBullet.h"
 
 NormalNpcBullet::NormalNpcBullet() {}
@@ -17,11 +18,11 @@ NormalNpcBullet::NormalNpcBullet(const NormalNpcBullet& nb)
 	m_Release = nb.m_Release;
 	m_Display = nb.m_Display;
 }
-void NormalNpcBullet::SetNormalNpcBulletPosition(const NormalNpc& nn)
+void NormalNpcBullet::SetNormalNpcBulletPosition(NormalNpc& nn)
 {
 	m_PosX = nn.GetPositionX() + NORMALNPCBULLETWIDTHOFFSET;
 	m_PosY = nn.GetPositionY() + NORMALNPCBULLETHEIGHTOFFSET;
 }
-void NormalNpcBullet::SetNormalNpcNumber(const NormalNpc& nn) { m_NormalNpcNumber = nn.m_Number; }
+void NormalNpcBullet::SetNormalNpcNumber(NormalNpc& nn) { m_NormalNpcNumber = nn.m_Number; }
 void NormalNpcBullet::SetNormalNpcNumber(int NormalNpcNumber) { m_NormalNpcNumber = NormalNpcNumber; }
 int NormalNpcBullet::GetNormalNpcNumber() const { return m_NormalNpcNumber; }
