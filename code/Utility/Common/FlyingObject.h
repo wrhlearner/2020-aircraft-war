@@ -1,6 +1,7 @@
-#pragma once
+#ifndef FLYINGOBJECT_H
+#define FLYINGOBJECT_H
+
 #include "Global.h"
-#include <vector>
 
 bool CheckCollision(double Width1, double Height1, double PosX1, double PosY1, double Width2, double Height2, double PosX2, double PosY2);
 
@@ -11,7 +12,7 @@ public:
 	FlyingObject(char* PictureMap, int Name, double Width, double Height, double PosX, double PosY, double Speed, MOVEDIRECTION Direction, bool Exist);
 	FlyingObject(const FlyingObject& fo);
 	virtual ~FlyingObject() {}
-	
+
 	//virtual void Collision() = 0;
 	virtual void Disappear();
 
@@ -31,7 +32,7 @@ public:
 	MOVEDIRECTION GetDirection() const;
 	void SetExist(bool Exist);
 	bool GetExist() const;
-	
+
 protected:
 	std::vector<char*> m_PictureMap;
 	//物体图像，用于显示物体
@@ -48,3 +49,5 @@ protected:
 	bool m_Exist;
 	//物体是否存在。例如，飞机生命值是否大于0， 子弹是否击中目标
 };
+
+#endif // !FLYINGOBJECT_H
