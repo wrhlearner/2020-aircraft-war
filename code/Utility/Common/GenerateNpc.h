@@ -1,8 +1,10 @@
-#pragma once
+#ifndef GENERATENPC_H
+#define GENERATENPC_H
+
+#include "Global.h"
 #include "BossNpc.h"
 #include "NormalNpc.h"
 #include "RandAlg.h"
-#include<list>
 
 class GenerateNpc
 {
@@ -12,3 +14,5 @@ public:
 	static BossNpcPlanes BossNpcCreator(int Number);
 	static NormalNpcPlanes NormalNpcCreator(int Number);
 };
+
+#endif // !GENERATENPC_H
