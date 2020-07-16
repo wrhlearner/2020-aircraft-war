@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "BossNpc.h"
 
 BossNpc::BossNpc()
@@ -29,3 +30,5 @@ BossNpc::BossNpc(const BossNpc& bn)
 	m_FirePower = bn.m_FirePower;
 	m_Number = bn.m_Number;
 }
+void BossNpc::SetNumber(int Number) { m_Number = Number; }
+int BossNpc::GetNumber() const { return m_Number; }
