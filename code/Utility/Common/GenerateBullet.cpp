@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "GenerateBullet.h"
 
 GenerateBullet::Bombs GenerateBullet::bcreator(int Number)
