@@ -1,4 +1,5 @@
-#pragma once
+#ifndef AIRCRAFT_H
+#define AIRCRAFT_H
 #include "FlyingObject.h"
 
 class Aircraft :public FlyingObject
@@ -20,3 +21,5 @@ protected:
 	int m_FirePower;
 	//飞行器子弹杀伤力
 };
+
+#endif    //!AIRCRAFT_H
