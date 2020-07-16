@@ -1,4 +1,6 @@
-#pragma once
+#ifndef NPCBULLET_H
+#define NPCBULLET_H
+
 #include "Bullet.h"
 
 class NpcBullet : public Bullet
@@ -9,3 +11,5 @@ public:
 	NpcBullet(const NpcBullet& nb);
 	~NpcBullet();
 };
+
+#endif // !NPCBULLET_H
