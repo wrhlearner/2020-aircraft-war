@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "FlyingObject.h"
 
 bool CheckCollision(double Width1, double Height1, double PosX1, double PosY1, double Width2, double Height2, double PosX2, double PosY2)
