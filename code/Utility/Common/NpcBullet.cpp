@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "NpcBullet.h"
 
 NpcBullet::NpcBullet()
