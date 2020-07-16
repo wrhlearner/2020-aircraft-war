@@ -1,7 +1,8 @@
+#include "pch.h"
 #include "Aircraft.h"
 
 Aircraft::Aircraft(){}
-Aircraft::Aircraft(char* PictureMap, int Name, double Width, double Height, double PosX, double PosY, double Speed, MOVEDIRECTION Direction, bool Exist, int Blood, int FirePower) :FlyingObject(PictureMap, Name, Width, Height, PosX, PosY, Speed, Direction)
+Aircraft::Aircraft(char* PictureMap, int Name, double Width, double Height, double PosX, double PosY, double Speed, MOVEDIRECTION Direction, bool Exist, int Blood, int FirePower) :FlyingObject(PictureMap, Name, Width, Height, PosX, PosY, Speed, Direction, Exist)
 {
 	m_Blood = Blood;
 	m_FirePower = FirePower;
