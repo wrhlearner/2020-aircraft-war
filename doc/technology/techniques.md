@@ -7,13 +7,13 @@
 
 |      名称     |         工具          |
 |:-------------:|:--------------------:|
+|代码编辑与调试|Visual Studio|
+|界面设计|Qt，QCreator5|
 |    版本控制    |     Git, GitHub      |
 |    持续集成    |      Jenkins         |
 |    构建工具    |    CMake，QMake      |
-|  规范检查（略）|       cpplint        |
-|  静态分析（略  |       cppcheck       |
-| 复杂度分析（略）|       cppncss        |
-|   覆盖率（略） | OpenCppCoverage,gcov |
+|文档撰写|LaTeX, Overleaf, Dillinger|
+|项目成员沟通|钉钉|
 
 
 # 具体实现
