@@ -1,4 +1,10 @@
-#pragma once
+#ifndef GLOBAL_H
+#define GLOBAL_H
+
+//include header files
+#include <iostream>
+#include <list>
+#include <vector>
 
 //name constant definition
 #define PLAYER 1
@@ -63,5 +69,7 @@
 #define BOSSNPCBULLETHEIGHTOFFSET 10.0
 
 
-//Data definition
+//Data type definition
 typedef enum { Pos, Neg, Neither } MOVEDIRECTION;
+
+#endif // !GLOBAL_H
