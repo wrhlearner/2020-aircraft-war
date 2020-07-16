@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #include "Aircraft.h"
 #include "NormalNpc.h"
 #include "BossNpc.h"
@@ -18,3 +20,5 @@ public:
 	void Disappear();
 	GenerateBullet::PlayerBullets LoadBullet(GenerateBullet::PlayerBullets pb);
 };
+
+#endif // !PLAYER_H
