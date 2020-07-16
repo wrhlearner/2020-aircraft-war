@@ -1,6 +1,7 @@
+#include "pch.h"
 #include "PlayerBullet.h"
 
-void PlayerBullet::SetBulletPosition(const Player& p)
+void PlayerBullet::SetBulletPosition(Player& p)
 {
 	m_PosX = p.GetPositionX() + PLAYERBULLETWIDTHOFFSET;
 	m_PosY = p.GetPositionY() - PLAYERBULLETHEIGHTOFFSET;
