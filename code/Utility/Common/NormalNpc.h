@@ -1,23 +1,15 @@
-#ifndef NORMALNPC_H
-#define NORMALNPC_H
+#ifndef NPCBULLET_H
+#define NPCBULLET_H
 
-#include "Npc.h"
-#include "Player.h"
-#include "GenerateBullet.h"
+#include "Bullet.h"
 
-class Player;
-class GenerateBullet;
-
-class NormalNpc : public Npc
+class NpcBullet : public Bullet
 {
 public:
-	NormalNpc();
-	NormalNpc(char* PictureMap, int Name, double Width, double Height, double StartPosX, double StartPosY, double Speed, MOVEDIRECTION Direction, bool Exist, int Blood, int FirePower, int Number);
-	NormalNpc(const NormalNpc& nn);
-	~NormalNpc() {}
-
-	int Collision(Player& TempPlayer, GenerateBullet::PlayerBullets pb);
-	GenerateBullet::NormalNpcBullets LoadBullet(GenerateBullet::NormalNpcBullets nnb);
+	NpcBullet();
+	NpcBullet(char* PictureMap, int Name, double Width, double Height, double PosX, double PosY, double Speed, MOVEDIRECTION Direction, bool Exist, int ObjectType, bool Release, bool Display);
+	NpcBullet(const NpcBullet& nb);
+	~NpcBullet();
 };
 
-#endif // !NORMALNPC_H
+#endif // !NPCBULLET_H
