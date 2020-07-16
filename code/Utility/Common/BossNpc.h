@@ -1,5 +1,10 @@
-#pragma once
+#ifndef BOSSNPC_H
+#define BOSSNPC_H
+
 #include "Npc.h"
+
+class Player;
+class GenerateBullet;
 
 class BossNpc : public Npc
 {
@@ -11,4 +16,8 @@ public:
 	//virtual void Collision();
 	//virtual void Disappear();
 	//virtual void EmitBullet();
+	void SetNumber(int Number);
+	int GetNumber() const;
 };
+
+#endif // !BOSSNPC_H
