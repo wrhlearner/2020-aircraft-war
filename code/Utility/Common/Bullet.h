@@ -1,4 +1,6 @@
-#pragma once
+#ifndef BULLET_H
+#define BULLET_H
+
 #include "FlyingObject.h"
 
 class Bullet :public FlyingObject
@@ -23,3 +25,5 @@ protected:
 	bool m_Release, m_Display;
 	//是否已经发射子弹，子弹是否显示
 };
+
+#endif // !BULLET_H
