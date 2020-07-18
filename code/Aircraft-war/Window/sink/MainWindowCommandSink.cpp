@@ -10,12 +10,22 @@ void MainWindowCommandSink::OnCommandComplete(const std::string& str, bool bOK)
 {
 	if( str == "KBIO" ) {
 		if( !bOK ) {
-			QMessageBox::critical(NULL, "I/O ERROR", "Unexpected error.", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+			QMessageBox::critical(NULL, "Keyboard I/O ERROR", "Unexpected error.", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
 		}
 	}
-	else if( str == "CONF"){
+	else if( str == "MSIO"){
 		if( !bOK ) {
-			QMessageBox::critical(NULL, "Conf ERROR", "Unexpected error.", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+			QMessageBox::critical(NULL, "Mouse I/O ERROR", "Unexpected error.", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+		}
+	}
+	else if( str == "RST"){
+		if( !bOK ) {
+			QMessageBox::critical(NULL, "Reset ERROR", "Unexpected error.", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+		}
+	}
+	else if( str == "RANK"){
+		if( !bOK ) {
+			QMessageBox::critical(NULL, "Rank ERROR", "Unexpected error.", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
 		}
 	}
 }

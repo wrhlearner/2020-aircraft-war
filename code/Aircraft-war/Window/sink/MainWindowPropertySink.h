@@ -9,7 +9,7 @@ class MainWindowPropertySink : public IPropertyNotification
 public:
 	MainWindowPropertySink(MainWindow* pW) throw();
 
-	virtual void OnPropertyChanged(const std::list<Npc>& Prop, const int& Type);
+	virtual void OnPropertyChanged(const std::string& str, int type, VisualObject *VOptr);
 
 private:
 	MainWindow* m_pW;
