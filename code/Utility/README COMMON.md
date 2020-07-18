@@ -1,6 +1,6 @@
 # common 层类结构
 
-![Alt text](./(class structure-first round implementation-update.jpg))
+![Alt text](./class_structure_first_round_implementation_update.jpg)
 
 # 游戏界面说明
 
