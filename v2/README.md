@@ -7,4 +7,7 @@
 - qmake
 - 图片库：myimage文件夹
 # 编程
-Qt Creator中新建other project->empty qmake project
+1. Qt Creator中新建other project->empty qmake project,选择MinGW 64bit编译器
+2. 将rar中.h，.cpp，/myimage/images.qrc文件添加到项目中
+3. 在.pro文件中添加以下指令
+    QT += widgets
