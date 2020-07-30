@@ -1,8 +1,7 @@
 # 2020-aircraft-war
 using C++ to build a simple aircraft war desktop game
-# code regulation (create a commit if disagreement exists)
-- use virtual function and virtual class for in the first round implementation. replace with lambda expression in later refractoring process.
-- use Camel case naming convention. Eg. VariableName, ClassName, PointerName. etc.
+# GAME release
+the latest version is included in folder v3.
 # News
 7.11 wrh 
 new common layer class structure
