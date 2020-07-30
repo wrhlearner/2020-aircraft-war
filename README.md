@@ -4,11 +4,13 @@ using C++ to build a simple aircraft war desktop game
 the latest version of executable file, source code are packed and included in folder v3.
 ### note
 ### the code representing MVVM design pattern is stored in Code folder.
-### there is no common/model/viewmodel/view/window/app layers in v3 source code for the sake of convenience.
+### there are no common/model/viewmodel/view/window/app layers in v3 source code for the sake of convenience.
 # game operation
 enter game: double click game interface to get menu.
 
 pause: double click game interface during the game to pause.
+
+end of game: when the player is dead, double click game interface to get menu.
 
 WASD: control player movement.
 
