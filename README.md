@@ -1,7 +1,9 @@
 # 2020-aircraft-war
 using C++ to build a simple aircraft war desktop game
 # GAME release
-the latest version of executable file, source code are packed and included in folder v3.
+the latest version of executable file is v3_release. Corresponding source code are packed into zip file v3_code.
+
+for detailed contents please search in folder v3 v2 and v1.
 ### note
 ### the code representing MVVM design pattern is stored in Code folder.
 ### there are no common/model/viewmodel/view/window/app layers in v3 source code for the sake of convenience.
