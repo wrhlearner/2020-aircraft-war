@@ -2,26 +2,19 @@
 using C++ to build a simple aircraft war desktop game
 # GAME release
 the latest version is included in folder v3.
-# News
-7.11 wrh 
-new common layer class structure
-- basic common layer class structure;
-- classes which should be implemented in 1st round is both bold and italic emphasized in the jpg file;
-- refer to common class to organize and write code in Model-ViewModel and View-Window layers.
-- file path: Code/Utility/Common/
-- read the README.md file for guidance.
+# game operation
+enter game: double click game interface to get menu.
 
-7.12 wrh
-- 创建了飞机、子弹类文件。
-- 待上传发射子弹、击中目标、目标消亡的代码。
+pause: double click game interface during the game to pause.
 
-7.13 wrh
-- 创建了common层Npc和子弹的生成类。
-- 子弹击中目标、目标消亡的类代码待上传。
+WASD: control player movement.
 
-7.13 wrh
-- 完成common层第一轮实现。
-- 游戏界面设想、坐标系等，详见code/Utility/Common/ 游戏界面.jpg及README.md
+J: emit bullet.
 
-7.16 tyc
-- 完成model层和viewmodel层第一轮实现
+Space: emit bomb.
+
+game help:
+
+player has 3 lives in total. catch a blood supply to get another life.
+
+player has 3 bombs at the beginning. catch a bomb supply to get another bomb.
