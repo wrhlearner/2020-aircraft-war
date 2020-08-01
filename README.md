@@ -5,8 +5,7 @@ the latest version of executable file is v3_release. Corresponding source code a
 
 for detailed contents please search in folder v3 v2 and v1.
 ### note
-### the code representing MVVM design pattern is stored in Code folder.
-### there are no common/model/viewmodel/view/window/app layers in v3 source code for the sake of convenience.
+### the game is designed using MVC design pattern.
 # game operation
 enter game: double click game interface to get menu.
 
